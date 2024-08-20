@@ -173,6 +173,8 @@ nav img {
     position: relative;
     height: 70vh;
     padding-bottom: 0px;
+    background: rgba(222, 222, 222, 1);
+
 }
 .book-container h3{
     font-family: Roboto Slab;
@@ -212,6 +214,91 @@ nav img {
     top: 15%; /* Pozycja środkowa książki */
     left: 35%;
     transform: translate(-50%, -50%) scale(4); /* Książka na środku jest od razu większa i wycentrowana */
+}
+
+.book-container2 {
+    display: none;/* potem dam flex*/
+    justify-content: center;
+    align-items: center;
+    height: 150vh;
+    margin: 0;
+    margin-bottom: 100px;
+    background-color: #f4f4f4;
+    flex-direction: column; /* Zmieniamy kierunek na pionowy */
+    align-items: center;
+    position: relative;
+    background: rgba(222, 222, 222, 1);
+}
+
+.book-bar {
+    display: flex;
+    flex-direction: row; /* Ustawienie książek poziomo nad główną książką */
+    gap: 10px;
+    margin-bottom: 100px; /* Odstęp między paskiem a główną książką */
+    
+}
+
+.book-thumbnail {
+    width: 250px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.book-thumbnail:hover {
+    transform: scale(1.1);
+}
+
+.main-book {
+    position: relative;
+    margin-left: 1%;
+    align-items: center;
+    width: 100%;
+}
+.right-side2 {
+    font-family: Josefin Sans;
+    font-size: 30px;
+    font-weight: 300;
+    text-align: left;
+}
+
+.sub-title2 {
+    color: red;
+    font-family: Josefin Sans;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 10px; /* Odstęp między tytułem a tekstem */
+    text-align: left;
+}
+
+.text-container2{
+    position: absolute;
+    top: 20px;
+    width: 300px;
+    margin-top: 60px;
+    margin-left: 520px;
+}
+
+.text-container2 p{
+    font-size: 20px;
+    width: 300px;
+}
+.book-image {
+    width: 500px;
+    height: auto;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.hide {
+    transform: scale(0.5);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.show {
+    transform: scale(1);
+    opacity: 1;
+    transition: transform 0.5s ease, opacity 0.5s ease;
 }
 .wywiady-title{
     font-family: Tinos;
@@ -357,6 +444,90 @@ nav img {
     margin-top: 60px;
     margin-right: 150px;
 }
+@media (max-width: 1000px){
+    .book-container{
+        display: none;
+    }
+    .book-container2{
+        display: flex;
+    }
+}
+@media (max-width: 880px){
+    .book-image{
+        scale: 0.75;
+    }
+    .text-container2{
+        margin-left: 450px;
+    }
+    .main-book{
+        margin-right: 100px;
+    }
+}
+@media (max-width: 705px) {
+    .text-container2{
+        transform: translateY(300px);
+        margin: 0;
+    }
+    .main-book{
+        margin: 0;
+    }
+    .book-container2{
+        height: 120vh;
+    }
+    .book-image{
+        width: 250px;
+        scale: 0.75;
+        margin: 0 32%;
+
+    }
+    .book-container2 p{
+        margin-left: 30%;
+        width: 450px;
+        text-align: center;
+    }
+    .book-thumbnail{
+        width: 150px;
+        scale: 0.75;
+    }
+    .book-bar{
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-bottom: 0;
+    }
+}
+@media (max-width: 625px) {
+    .book-container2 p{
+        margin-left: 20%;
+    }
+}
+@media (max-width: 570px) {
+    .book-container2 p{
+        margin-left: 15%;
+        width: 400px;
+        margin-bottom: -20px;
+    }
+    .book-image{
+        margin: 0 25%;
+    }
+}
+@media (max-width: 480px){
+    .book-container2 p{
+        font-size: 15px;
+        width: 300px;
+        margin-bottom: 0;
+        margin-left: 30%;
+    }
+}
+@media (max-width: 420px) {
+    .book-image{
+        width: 250px;
+        scale: 0.75;
+        margin: 0 15%;
+    }
+    .book-container2 p{
+        margin-left: 12%;
+    }
+}
 @media (max-width: 1700px) {
 
     .jego-historia-zyciowa{
@@ -380,15 +551,32 @@ nav img {
     }
 }
 @media (max-width: 1450px) {
-    .right-side{
-        font-size: 10px;
+    .book-container p{
+        font-size: 20px;
+        width: 500px;
     }
     .book3{
         margin-left: 50px;
     }
+    .book1, .book2, .book3{
+        scale: 0.75;
+    }
+    .text-container{
+        width: 500px;
+        margin-right: 5%;
+    }
 }
 
-
+@media (max-width: 1260px) {
+    .book-container p{
+        font-size: 20px;
+        width: 400px;
+    }
+    .text-container{
+        width: 400px;
+        margin-right: 0.5%;
+    }
+}
 
 
 /* Dla ekranów o szerokości mniejszej niż 768px */
@@ -518,7 +706,7 @@ nav img {
 }
 @media (max-width: 750px){
     .jego-historia-zyciowa{
-        height: 100vh;
+        height: 70vh;
     }
     .pannel p{
         font-size: 25px;
@@ -539,8 +727,106 @@ nav img {
         height: 130vh;
     }
 }
-@media (max-width: 375px) {
+/* telefony*/
+@media (max-width: 1024px){
     .jego-historia-zyciowa{
-        
+        height: 100vh;
+    }
+}
+@media (max-width: 540px){
+    .book-image{
+        margin-left: 27%;
+    }
+    .book-container2 p{
+        margin-left: 75px;
+    }
+    .book-container2{
+        height: 150vh;
+    }
+}
+@media (max-width: 475px){
+    .book-image{
+        margin-left: 22%;
+    }
+}
+@media (max-width: 430px){
+    .book-image{
+        margin-left: 22%;
+    }
+    .book-container2 p{
+        margin-left: 70px;
+    }
+    .book-container2{
+        height: 105vh;
+    }
+    .jego-historia-zyciowa{
+        height: 120vh;
+    }
+}
+@media (max-width: 414px){
+    .book-image{
+        margin-left: 20%;
+    }
+    .book-container2 p{
+        margin-left: 60px;
+    }
+    .book-container2{
+        height: 110vh;
+    }
+    .jego-historia-zyciowa{
+        height: 130vh;
+    }
+}
+@media (max-width: 390px){
+    .book-image{
+        margin-left: 19%;
+    }
+    .book-container2 p{
+        margin-left: 50px;
+    }
+    .book-container2{
+        height: 120vh;
+    }
+    .jego-historia-zyciowa{
+        height: 150vh;
+    }
+}
+@media (max-width: 375px){
+    .book-image{
+        margin-left: 17%;
+    }
+    .book-container2 p{
+        margin-left: 40px;
+    }
+    .book-container2{
+        height: 150vh;
+    }
+    .jego-historia-zyciowa{
+        height: 170vh;
+    }
+}
+@media (max-width: 360px){
+    .book-image{
+        margin-left: 17%;
+    }
+    .book-container2 p{
+        margin-left: 40px;
+    }
+    .book-container2{
+        height: 130vh;
+    }
+}
+@media (max-width: 344px){
+    .book-image{
+        margin-left: 15%;
+    }
+    .book-container2 p{
+        margin-left: 30px;
+    }
+    .book-container2{
+        height: 110vh;
+    }
+    .jego-historia-zyciowa{
+        height: 150vh;
     }
 }
