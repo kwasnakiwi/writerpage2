@@ -701,6 +701,7 @@ nav img {
         width: 200px; 
         border: 1px solid #ccc;
         padding: 10px;
+        z-index: 1001;
     }
 
     .nav-links a {
@@ -712,7 +713,7 @@ nav img {
         display: block; 
         cursor: pointer;
         font-size: 30px;
-        z-index: 1;
+        z-index: 1001;
     }
 
     .nav-links.active {
@@ -761,11 +762,6 @@ nav img {
         padding: 0 5px;
     }
 }
-@media (max-width: 550px){
-    .wywiady-title{
-        margin-top: 200px;
-    }
-}
 
 @media (max-width: 550px) {
     .jego-historia-zyciowa{
@@ -777,7 +773,7 @@ nav img {
         height: 130vh;
     }
     .wywiady-title{
-        margin-top: 0;
+        margin-top: 200px;
     }
 }
 /* telefony*/
@@ -810,7 +806,7 @@ nav img {
         height: 80vh;
     }
     .wywiady-title{
-        margin-top: 0;
+        margin-top: 200px;
     }
 }
 @media (max-width: 430px){
@@ -821,7 +817,7 @@ nav img {
         height: 80vh;
     }
     .jego-historia-zyciowa{
-        height: 100vh;
+        height: 80vh;
         padding-bottom: 170px;
     }
 }
@@ -833,7 +829,8 @@ nav img {
         height: 110vh;
     }
     .jego-historia-zyciowa{
-        height: 130vh;
+        height: 115vh;
+        padding-bottom: 300px;
     }
 }
 @media (max-width: 390px){
@@ -843,9 +840,6 @@ nav img {
     .book-container2{
         height: 120vh;
     }
-    .jego-historia-zyciowa{
-        height: 150vh;
-    }
 }
 @media (max-width: 375px){
     .book-image{
@@ -853,9 +847,6 @@ nav img {
     }
     .book-container2{
         height: 150vh;
-    }
-    .jego-historia-zyciowa{
-        height: 170vh;
     }
 }
 @media (max-width: 360px){
@@ -872,8 +863,5 @@ nav img {
     }
     .book-container2{
         height: 110vh;
-    }
-    .jego-historia-zyciowa{
-        height: 150vh;
     }
 }
