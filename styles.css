@@ -3,6 +3,17 @@ body{
     background: rgba(222, 222, 222, 1);
 }
 
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -40,6 +51,7 @@ nav img {
 
 .text-btns-icons{
     margin-top: 100px;
+    animation: slideInFromLeft 1s ease-out forwards;
 }
 .title-name{
     font-family: MonteCarlo;
@@ -56,6 +68,15 @@ nav img {
     text-align: left;
     margin-top: 20px;
 }
+.main-img {
+    opacity: 0; 
+    transition: opacity 1.5s ease-in-out; 
+}
+
+.main-img.loaded {
+    opacity: 1; 
+}
+
 .buttons{
     display: flex;
     gap: 40px;
@@ -96,7 +117,7 @@ nav img {
 }
 .jego-historia-zyciowa{
     color: white;
-    background-image: url(Pisarz-imgs/Vector3.png);
+    background-image: url(images/Vector3.png);
     padding: 60px 10% 120px 10%;
     background-size: cover;
     height: 60vh;
@@ -467,21 +488,25 @@ nav img {
     .text-container2{
         transform: translateY(300px);
         margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: max-content;
     }
     .main-book{
         margin: 0;
+        display: flex;
+        justify-content: center;
     }
     .book-container2{
-        height: 120vh;
+        height: 80vh;
     }
     .book-image{
         width: 250px;
         scale: 0.75;
-        margin: 0 32%;
-
+        margin: 0;
     }
     .book-container2 p{
-        margin-left: 30%;
         width: 450px;
         text-align: center;
     }
@@ -494,20 +519,34 @@ nav img {
         margin-right: 2%;
         margin-bottom: 0;
     }
+    .wywiady-title{
+        margin-top: 200px;
+    }
+    .right-side2{
+        margin: 0;
+    }
 }
 @media (max-width: 625px) {
-    .book-container2 p{
-        margin-left: 20%;
+    .text-container2{
+        transform: translateY(300px);
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: max-content;
     }
 }
 @media (max-width: 570px) {
-    .book-container2 p{
-        margin-left: 15%;
-        width: 400px;
-        margin-bottom: -20px;
-    }
     .book-image{
         margin: 0 25%;
+    }
+    .text-container2{
+        transform: translateY(300px);
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: max-content;
     }
 }
 @media (max-width: 480px){
@@ -515,7 +554,14 @@ nav img {
         font-size: 15px;
         width: 300px;
         margin-bottom: 0;
-        margin-left: 30%;
+    }
+    .text-container2{
+        transform: translateY(300px);
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: max-content;
     }
 }
 @media (max-width: 420px) {
@@ -523,9 +569,6 @@ nav img {
         width: 250px;
         scale: 0.75;
         margin: 0 15%;
-    }
-    .book-container2 p{
-        margin-left: 12%;
     }
 }
 @media (max-width: 1700px) {
@@ -669,6 +712,7 @@ nav img {
         display: block; 
         cursor: pointer;
         font-size: 30px;
+        z-index: 1;
     }
 
     .nav-links.active {
@@ -694,7 +738,7 @@ nav img {
 }
 @media (max-width: 688px) {
     .main-img{
-        width: 358.5px;
+        width: 328.5px;
     }
     .app-icons{
         gap: 40px;
@@ -717,6 +761,12 @@ nav img {
         padding: 0 5px;
     }
 }
+@media (max-width: 550px){
+    .wywiady-title{
+        margin-top: 200px;
+    }
+}
+
 @media (max-width: 550px) {
     .jego-historia-zyciowa{
         height: 110vh;
@@ -725,6 +775,9 @@ nav img {
 @media (max-width: 420px) {
     .jego-historia-zyciowa{
         height: 130vh;
+    }
+    .wywiady-title{
+        margin-top: 0;
     }
 }
 /* telefony*/
@@ -737,38 +790,44 @@ nav img {
     .book-image{
         margin-left: 27%;
     }
-    .book-container2 p{
-        margin-left: 75px;
-    }
     .book-container2{
-        height: 150vh;
+        height: 80vh;
+    }
+    .jego-historia-zyciowa{
+        height: 100vh;
+        padding-bottom: 100px;
     }
 }
 @media (max-width: 475px){
     .book-image{
         margin-left: 22%;
     }
+    .jego-historia-zyciowa{
+        height: 100vh;
+        padding-bottom: 180px;
+    }
+    .book-container2{
+        height: 80vh;
+    }
+    .wywiady-title{
+        margin-top: 0;
+    }
 }
 @media (max-width: 430px){
     .book-image{
         margin-left: 22%;
     }
-    .book-container2 p{
-        margin-left: 70px;
-    }
     .book-container2{
-        height: 105vh;
+        height: 80vh;
     }
     .jego-historia-zyciowa{
-        height: 120vh;
+        height: 100vh;
+        padding-bottom: 170px;
     }
 }
 @media (max-width: 414px){
     .book-image{
         margin-left: 20%;
-    }
-    .book-container2 p{
-        margin-left: 60px;
     }
     .book-container2{
         height: 110vh;
@@ -781,9 +840,6 @@ nav img {
     .book-image{
         margin-left: 19%;
     }
-    .book-container2 p{
-        margin-left: 50px;
-    }
     .book-container2{
         height: 120vh;
     }
@@ -794,9 +850,6 @@ nav img {
 @media (max-width: 375px){
     .book-image{
         margin-left: 17%;
-    }
-    .book-container2 p{
-        margin-left: 40px;
     }
     .book-container2{
         height: 150vh;
@@ -809,9 +862,6 @@ nav img {
     .book-image{
         margin-left: 17%;
     }
-    .book-container2 p{
-        margin-left: 40px;
-    }
     .book-container2{
         height: 130vh;
     }
@@ -819,9 +869,6 @@ nav img {
 @media (max-width: 344px){
     .book-image{
         margin-left: 15%;
-    }
-    .book-container2 p{
-        margin-left: 30px;
     }
     .book-container2{
         height: 110vh;

@@ -104,3 +104,17 @@ manageClickableBooks();
 document.querySelector('.hamburger').addEventListener('click', function() {
     document.querySelector('.nav-links').classList.toggle('active');
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    var img = document.querySelector(".main-img");
+
+    img.onload = function() {
+        img.classList.add("loaded");
+    };
+
+    // Jeśli obraz jest już w pamięci podręcznej przeglądarki, uruchom onload natychmiast
+    if (img.complete) {
+        img.onload();
+    }
+});
+
