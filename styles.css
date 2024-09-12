@@ -2,7 +2,9 @@ body{
     margin: 0;
     background: rgba(222, 222, 222, 1);
 }
-
+ul{
+    padding: 0;
+}
 @keyframes slideInFromLeft {
     0% {
         transform: translateX(-100%);
@@ -50,7 +52,7 @@ nav img {
 }
 
 .text-btns-icons{
-    margin-top: 100px;
+    margin-top: 70px;
     animation: slideInFromLeft 1s ease-out forwards;
 }
 .title-name{
@@ -71,7 +73,7 @@ nav img {
 .main-img {
     opacity: 0; 
     transition: opacity 1.5s ease-in-out;
-    height: 654.24px;
+    height: 600px;
 }
 
 .main-img.loaded {
@@ -99,19 +101,28 @@ nav img {
 .web-top{
     display: flex;
     justify-content: center;
-    gap: 50px;
-    padding: 50px 12% 150px 12%;
-    margin-bottom: 100px;
+    padding: 10px 9% 0 15%;
+    align-items: center;
+}
+.web-top-container{
     background-image: url(images/person.png);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 925px;
     background-position-y: 20px;
-    align-items: center;
+    padding-bottom: 30px;
 }
 .witkowski-text{
     display: flex;
     justify-content: center;
-    margin-top: 120px;
+    margin-top: auto;
+}
+.text-under-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.witkowski-text-img{
+    margin-left: 18%;
 }
 .app-icons{
     margin-top: 50px;
@@ -124,6 +135,7 @@ nav img {
     font-weight: 400;
     display: flex;
     justify-content: flex-end;
+    margin: 0;
 }
 
 .jego-historia-zyciowa-paragraphs{
@@ -592,6 +604,9 @@ nav img {
         scale: 0.75;
         margin: 0 15%;
     }
+    .buttons{
+        display: block;
+    }
 }
 @media (max-width: 1700px) {
 
@@ -681,6 +696,19 @@ nav img {
 
     }
 }
+@media (max-width: 1310px) {
+    .text-under-top{
+        display: block;
+        text-align: center;
+    }
+    .nike-text{
+        display: flex;
+        justify-content: center;
+    }
+    .witkowski-text-img{
+        margin: 0;
+    }
+}
 @media (max-width: 1285px) {
     .wywiady{
         margin-left: 5%;
@@ -739,6 +767,9 @@ nav img {
     .nike-text img{
         width: 200px;
     }
+    .nike-text{
+        justify-content: center;
+    }
     .nav-links a {
         font-size: 20px; 
         padding: 10px 0;
@@ -781,10 +812,7 @@ nav img {
     .app-icons{
         gap: 40px;
     }
-    .web-top{
-        margin-left: 5%;
-        margin-right: 5%;
-    }
+
 }
 @media (max-width: 750px){
     .jego-historia-zyciowa{
@@ -849,6 +877,7 @@ nav img {
     }
     .nike-text{
         display: block;
+        text-align: center;
     }
 }
 @media (max-width: 430px){
