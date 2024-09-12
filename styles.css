@@ -70,7 +70,8 @@ nav img {
 }
 .main-img {
     opacity: 0; 
-    transition: opacity 1.5s ease-in-out; 
+    transition: opacity 1.5s ease-in-out;
+    height: 654.24px;
 }
 
 .main-img.loaded {
@@ -99,13 +100,32 @@ nav img {
     display: flex;
     justify-content: center;
     gap: 50px;
-    margin: 50px 12% 50px 12%;
+    padding: 50px 12% 150px 12%;
+    margin-bottom: 100px;
+    background-image: url(images/person.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: 20px;
+    align-items: center;
+}
+.witkowski-text{
+    display: flex;
+    justify-content: center;
+    margin-top: 120px;
 }
 .app-icons{
     margin-top: 50px;
     display: flex;
     gap: 100px;
 }
+.nike-text{
+    font-family: MonteCarlo;
+    font-size: 96px;
+    font-weight: 400;
+    display: flex;
+    justify-content: flex-end;
+}
+
 .jego-historia-zyciowa-paragraphs{
     display: flex;
     font-family: Josefin Sans;
@@ -135,6 +155,7 @@ nav img {
 .history-text{
     margin-bottom: 0;
     margin-top: 0;
+    line-height: normal;
 }
 .text-arrow{
     position: relative;
@@ -213,17 +234,16 @@ nav img {
 .book {
     position: absolute;
     width: 100px;
-    height: 150px;
     cursor: pointer;
     transition: all 0.5s ease;
-    padding-top: 100px;
+    margin-top: 100px;
 }
 
 .book1 {
     top: 10%; /* Odległość od górnej krawędzi */
     left: 10%;
     transform: translate(0, 0) scale(2);
-    padding: 0;
+    margin: 0;
 }
 
 .book2 {
@@ -236,6 +256,7 @@ nav img {
     top: 15%; /* Pozycja środkowa książki */
     left: 35%;
     transform: translate(-50%, -50%) scale(4); /* Książka na środku jest od razu większa i wycentrowana */
+    margin-top: 200px;
 }
 
 .book-container2 {
@@ -575,11 +596,14 @@ nav img {
 @media (max-width: 1700px) {
 
     .jego-historia-zyciowa{
-        height: 60vh;
-        padding: 150px 10% 180px 10%;
+        height: 30vh;
+        padding: 75px 10% 180px 10%;
     }
     .text-container{
        margin-right: 50px;
+    }
+    .history-text{
+        font-size: 22px;
     }
 }
 @media (max-width: 1550px) {
@@ -590,7 +614,7 @@ nav img {
 }
 @media (max-width: 1500px) {
     .jego-historia-zyciowa{
-        height: 60vh;
+        height: 30vh;
         padding: 20px 10% 200px 10%;
     }
 }
@@ -620,6 +644,9 @@ nav img {
         width: 400px;
         margin-right: 0.5%;
     }
+    .main-img{
+        height: 500px;
+    }
 }
 
 
@@ -644,16 +671,14 @@ nav img {
 }
 @media(max-width: 1350px) {
     .history-text{
-        font-size: 30px;
-        line-height: 30px;
+        font-size: 18px;
 
     }
     .text-over{
         margin-top: 15px;
     }
     .jego-historia-zyciowa{
-        height: 60vh;
-        padding: 20px 10% 90px 10%;
+
     }
 }
 @media (max-width: 1285px) {
@@ -672,13 +697,19 @@ nav img {
 }
 @media (max-width: 1225px) {
     .main-img{
-        width: 537.75px;
+        
+    }
+    .nike-text{
+        font-size: 70px;
+        align-items: center;
     }
 }
-@media (max-width: 1000px) {
+@media (max-width: 1020px) {
     .web-top{
         display: block;
         text-align: center;
+        padding-left: 5%;
+        padding-right: 5%;
     }
     .under-title-name{
         text-align: center;
@@ -705,6 +736,9 @@ nav img {
         z-index: 1001;
     }
 
+    .nike-text img{
+        width: 200px;
+    }
     .nav-links a {
         font-size: 20px; 
         padding: 10px 0;
@@ -738,10 +772,12 @@ nav img {
         margin-top: 15px;
     }
 }
-@media (max-width: 688px) {
+@media (max-width: 780px) {
     .main-img{
-        width: 328.5px;
+        height: 250px;
     }
+}
+@media (max-width: 688px) {
     .app-icons{
         gap: 40px;
     }
@@ -768,6 +804,7 @@ nav img {
     .jego-historia-zyciowa{
         height: 110vh;
     }
+
 }
 @media (max-width: 420px) {
     .jego-historia-zyciowa{
@@ -780,10 +817,10 @@ nav img {
 /* telefony*/
 @media (max-width: 1024px){
     .jego-historia-zyciowa{
-        height: 100vh;
+        height: 45vh;
     }
 }
-@media (max-width: 540px){
+@media (max-width: 570px){
     .book-image{
         margin-left: 27%;
     }
@@ -794,6 +831,7 @@ nav img {
         height: 100vh;
         padding-bottom: 100px;
     }
+
 }
 @media (max-width: 475px){
     .book-image{
@@ -809,6 +847,9 @@ nav img {
     .wywiady-title{
         margin-top: 200px;
     }
+    .nike-text{
+        display: block;
+    }
 }
 @media (max-width: 430px){
     .book-image{
@@ -818,8 +859,11 @@ nav img {
         height: 80vh;
     }
     .jego-historia-zyciowa{
-        height: 80vh;
+
         padding-bottom: 170px;
+    }
+    .witkowski-text-img{
+        width: 280px;
     }
 }
 @media (max-width: 414px){
@@ -830,7 +874,7 @@ nav img {
         height: 110vh;
     }
     .jego-historia-zyciowa{
-        height: 115vh;
+        height: 80vh;
         padding-bottom: 300px;
     }
 }
