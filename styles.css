@@ -167,7 +167,7 @@ nav img {
 .history-text{
     margin-bottom: 0;
     margin-top: 0;
-    line-height: normal;
+    line-height: 40px;
 }
 .text-arrow{
     position: relative;
@@ -448,6 +448,7 @@ nav img {
     font-size: 48px;
     font-weight: 400;
     text-align: center;
+    line-height: normal;
 }
 .wrapper{
     max-width: 75%;
@@ -499,117 +500,7 @@ nav img {
     margin-top: 60px;
     margin-right: 150px;
 }
-@media (max-width: 1000px){
-    .book-container{
-        display: none;
-    }
-    .book-container2{
-        display: flex;
-    }
-}
-@media (max-width: 880px){
-    .book-image{
-        scale: 0.75;
-    }
-    .text-container2{
-        margin-left: 450px;
-    }
-    .main-book{
-        margin-right: 100px;
-    }
-}
-@media (max-width: 705px) {
-    .text-container2{
-        transform: translateY(300px);
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: max-content;
-    }
-    .main-book{
-        margin: 0;
-        display: flex;
-        justify-content: center;
-    }
-    .book-container2{
-        height: 80vh;
-    }
-    .book-image{
-        width: 250px;
-        scale: 0.75;
-        margin: 0;
-    }
-    .book-container2 p{
-        width: 450px;
-        text-align: center;
-    }
-    .book-thumbnail{
-        width: 150px;
-        scale: 0.75;
-    }
-    .book-bar{
-        margin-left: 2%;
-        margin-right: 2%;
-        margin-bottom: 0;
-    }
-    .wywiady-title{
-        margin-top: 200px;
-    }
-    .right-side2{
-        margin: 0;
-    }
-}
-@media (max-width: 625px) {
-    .text-container2{
-        transform: translateY(300px);
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: max-content;
-    }
-}
-@media (max-width: 570px) {
-    .book-image{
-        margin: 0 25%;
-    }
-    .text-container2{
-        transform: translateY(300px);
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: max-content;
-    }
-}
-@media (max-width: 480px){
-    .book-container2 p{
-        font-size: 15px;
-        width: 300px;
-        margin-bottom: 0;
-    }
-    .text-container2{
-        transform: translateY(300px);
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: max-content;
-    }
-}
-@media (max-width: 420px) {
-    .book-image{
-        width: 250px;
-        scale: 0.75;
-        margin: 0 15%;
-    }
-    .buttons{
-        display: block;
-    }
-}
 @media (max-width: 1700px) {
-
     .jego-historia-zyciowa{
         height: 30vh;
         padding: 75px 10% 180px 10%;
@@ -619,10 +510,13 @@ nav img {
     }
     .history-text{
         font-size: 22px;
+        line-height: 20px;
+    }
+    .img-n-arrow-text img{
+        width: 502.5px;
     }
 }
 @media (max-width: 1550px) {
-
     .text-container{
        margin-right: 5px;
     }
@@ -649,41 +543,6 @@ nav img {
         margin-right: 5%;
     }
 }
-
-@media (max-width: 1260px) {
-    .book-container p{
-        font-size: 20px;
-        width: 400px;
-    }
-    .text-container{
-        width: 400px;
-        margin-right: 0.5%;
-    }
-    .main-img{
-        height: 500px;
-    }
-}
-
-
-/* Dla ekranów o szerokości mniejszej niż 768px */
-@media (max-width: 768px) {
-    .text-container {
-        margin-right: 20px;
-    }
-}
-
-/* Dla ekranów o szerokości mniejszej niż 576px */
-@media (max-width: 576px) {
-    .text-container {
-        margin-right: 10px;
-    }
-}
-
-@media (max-width: 1700px) {
-    .img-n-arrow-text img{
-        width: 502.5px;
-    }
-}
 @media(max-width: 1350px) {
     .history-text{
         font-size: 18px;
@@ -691,9 +550,6 @@ nav img {
     }
     .text-over{
         margin-top: 15px;
-    }
-    .jego-historia-zyciowa{
-
     }
 }
 @media (max-width: 1310px) {
@@ -708,11 +564,36 @@ nav img {
     .witkowski-text-img{
         margin: 0;
     }
+    .web-top-container{
+        background-size: 700px;
+    }
 }
 @media (max-width: 1285px) {
     .wywiady{
         margin-left: 5%;
         margin-right: 5%;
+    }
+}
+@media (max-width: 1260px) {
+    .book-container p{
+        font-size: 20px;
+        width: 400px;
+    }
+    .text-container{
+        width: 400px;
+        margin-right: 0.5%;
+    }
+    .main-img{
+        height: 450px;
+    }
+}
+@media (max-width: 1225px) {
+    .main-img{
+        
+    }
+    .nike-text{
+        font-size: 70px;
+        align-items: center;
     }
 }
 @media (max-width: 1154px) {
@@ -723,13 +604,9 @@ nav img {
     grid-template-columns: 1fr;
    }
 }
-@media (max-width: 1225px) {
-    .main-img{
-        
-    }
-    .nike-text{
-        font-size: 70px;
-        align-items: center;
+@media (max-width: 1024px){
+    .jego-historia-zyciowa{
+        height: 45vh;
     }
 }
 @media (max-width: 1020px) {
@@ -786,12 +663,20 @@ nav img {
         display: flex; 
     }
 }
+@media (max-width: 1000px){
+    .book-container{
+        display: none;
+    }
+    .book-container2{
+        display: flex;
+    }
+}
 @media (max-width: 940px) {
     .jego-historia-zyciowa-paragraphs{
         display: block;
     }
     .jego-historia-zyciowa{
-        height: 70vh;
+        height: 50vh;
     }
     .text-over{
          margin-top: 20px;
@@ -803,20 +688,27 @@ nav img {
         margin-top: 15px;
     }
 }
-@media (max-width: 780px) {
-    .main-img{
-        height: 250px;
+@media (max-width: 880px){
+    .book-image{
+        scale: 0.75;
+    }
+    .text-container2{
+        margin-left: 450px;
+    }
+    .main-book{
+        margin-right: 100px;
     }
 }
-@media (max-width: 688px) {
-    .app-icons{
-        gap: 40px;
-    }
 
+/* Dla ekranów o szerokości mniejszej niż 768px */
+@media (max-width: 768px) {
+    .text-container {
+        margin-right: 20px;
+    }
 }
 @media (max-width: 750px){
     .jego-historia-zyciowa{
-        height: 70vh;
+        height: 50vh;
     }
     .pannel p{
         font-size: 25px;
@@ -827,28 +719,87 @@ nav img {
         padding: 0 5px;
     }
 }
-
-@media (max-width: 550px) {
-    .jego-historia-zyciowa{
-        height: 110vh;
+@media (max-width: 705px) {
+    .text-container2{
+        transform: translateY(300px);
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: max-content;
     }
-
-}
-@media (max-width: 420px) {
-    .jego-historia-zyciowa{
-        height: 130vh;
+    .main-book{
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+    .book-container2{
+        height: 80vh;
+    }
+    .book-image{
+        width: 250px;
+        scale: 0.75;
+        margin: 0;
+    }
+    .book-container2 p{
+        width: 450px;
+        text-align: center;
+    }
+    .book-thumbnail{
+        width: 150px;
+        scale: 0.75;
+    }
+    .book-bar{
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-bottom: 0;
     }
     .wywiady-title{
         margin-top: 200px;
     }
-}
-/* telefony*/
-@media (max-width: 1024px){
-    .jego-historia-zyciowa{
-        height: 45vh;
+    .right-side2{
+        margin: 0;
     }
 }
-@media (max-width: 570px){
+@media (max-width: 688px) {
+    .app-icons{
+        gap: 40px;
+    }
+
+}
+@media (max-width: 625px) {
+    .text-container2{
+        transform: translateY(300px);
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: max-content;
+    }
+}
+@media (max-width: 585px) {
+    .main-img{
+        height: 300px;
+    }
+}
+/* Dla ekranów o szerokości mniejszej niż 576px */
+@media (max-width: 576px) {
+    .text-container {
+        margin-right: 10px;
+    }
+}
+@media (max-width: 570px) {
+    .book-image{
+        margin: 0 25%;
+    }
+    .text-container2{
+        transform: translateY(300px);
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: max-content;
+    }
     .book-image{
         margin-left: 27%;
     }
@@ -856,10 +807,30 @@ nav img {
         height: 80vh;
     }
     .jego-historia-zyciowa{
-        height: 100vh;
+        height: 70vh;
         padding-bottom: 100px;
     }
+}
+@media (max-width: 550px) {
+    .jego-historia-zyciowa{
+        height: 75vh;
+    }
 
+}
+@media (max-width: 480px){
+    .book-container2 p{
+        font-size: 15px;
+        width: 300px;
+        margin-bottom: 0;
+    }
+    .text-container2{
+        transform: translateY(300px);
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: max-content;
+    }
 }
 @media (max-width: 475px){
     .book-image{
@@ -879,6 +850,9 @@ nav img {
         display: block;
         text-align: center;
     }
+    .web-top-container{
+        background-size: 500px;
+    }
 }
 @media (max-width: 430px){
     .book-image{
@@ -894,17 +868,39 @@ nav img {
     .witkowski-text-img{
         width: 280px;
     }
+    .title-name{
+        font-size: 80px;
+    }
 }
+@media (max-width: 440px) {
+    .book-image{
+        width: 250px;
+        scale: 0.75;
+        margin: 0 15%;
+    }
+    .buttons{
+        display: block;
+    }
+    .jego-historia-zyciowa{
+        height: 130vh;
+    }
+    .wywiady-title{
+        margin-top: 200px;
+    }
+}
+
 @media (max-width: 414px){
     .book-image{
         margin-left: 20%;
     }
-    .book-container2{
-        height: 110vh;
-    }
     .jego-historia-zyciowa{
         height: 80vh;
         padding-bottom: 300px;
+    }
+}
+@media (max-width: 405px){
+    .main-img{
+        height: 200px;
     }
 }
 @media (max-width: 390px){
@@ -914,6 +910,21 @@ nav img {
     .book-container2{
         height: 120vh;
     }
+    .img-n-arrow-text img{
+        width: 260px;
+    }
+    .wrapper h2{
+        font-size: 40px;
+    }
+
+    .btn1{
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .web-top{
+        padding: 0;
+    }
+
 }
 @media (max-width: 375px){
     .book-image{
@@ -937,5 +948,11 @@ nav img {
     }
     .book-container2{
         height: 110vh;
+    }
+    .jego-historia-zyciowa{
+        height: 100vh;
+    }
+    .text-over{
+        font-size: 20px;
     }
 }
